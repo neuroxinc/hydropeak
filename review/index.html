@@ -107,31 +107,29 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
     </div>
 
     <div class="verdict">
-      <span class="big">PRODUCT IDENTITY INCIDENT</span>
-      <span class="p fail">生成 凍結中</span>
+      <span class="big" style="color:var(--warn)">PAID READY: あと1つ</span>
+      <span class="p warn">CEO操作が1件だけ残っています</span>
     </div>
 
-    <div class="blocker">
-      <b>広告に使っていた商品が、販売予定の商品と違いました。</b><br>
-      仕入先ページ全体を1つの証拠として扱ったため、
-      <b>同じページ内の「類似商品」の特徴</b>を本体の特徴として取り込んでいました。
-      類似商品の画像は本体ギャラリーと<b>同じ 800×800</b>で、見た目では区別できません。<br><br>
-      <b>Preflight 100/100 は「商品が正しい」ことを意味していませんでした。</b>
-      点数は演出の準備度しか見ておらず、商品同一性を1つも検査していませんでした。
-      これを恒久的に直しました（下記 02）。<br><br>
-      現在 <b>Higgsfield の生成をコードレベルで凍結</b>しています。
-      凍結後に使ったクレジットは <b>0</b> です。
+    <div class="blocker" style="border-left-color:var(--pass);background:rgba(62,201,138,.07)">
+      <b style="color:var(--pass)">承認いただいた正しい商品で作り直しました。</b>
+      A / B / C の3本とも、全カットで散水面・黒い帯・傾いたヘッド・
+      細いハンドル・首のスイッチが一致しています。
+      刻みのある回転カラーも ▲▼ ボタンも1カットも出ていません。<br><br>
+      使ったクレジットは <b>70</b>（前回設計の半分）。
+      共有ショット6本を3本の広告で使い回し、ナレーションと編集構成は再利用しました。<br><br>
+      残っているのは <b>TikTokアカウントの連携（約2分・CEO操作）</b>だけです。
     </div>
 
     <div class="gates">
-      <div class="gate"><div class="k">PRODUCT IDENTITY</div><span class="p fail">要CEO承認</span></div>
-      <div class="gate"><div class="k">旧 CREATIVE A/B/C</div><span class="p fail">INVALIDATED</span></div>
-      <div class="gate"><div class="k">BASE 画像</div><span class="p fail">要差し替え</span></div>
+      <div class="gate"><div class="k">PRODUCT IDENTITY</div><span class="p pass">CEO承認済</span></div>
+      <div class="gate"><div class="k">CREATIVE A/B/C</div><span class="p pass">PASS</span></div>
+      <div class="gate"><div class="k">BASE 画像</div><span class="p warn">差し替え待ち</span></div>
       <div class="gate"><div class="k">ADS INFRA</div><span class="p pass">PASS</span></div>
       <div class="gate"><div class="k">FUNNEL (PAID)</div><span class="p pass">Checkout到達</span></div>
       <div class="gate"><div class="k">TRACKING</div><span class="p warn">LIMITED</span></div>
       <div class="gate"><div class="k">SAFE BUDGET</div><span class="p warn">要CEO判断</span></div>
-      <div class="gate"><div class="k">生成</div><span class="p fail">FROZEN</span></div>
+      <div class="gate"><div class="k">TIKTOK 広告素材</div><span class="p fail">CEO操作待ち</span></div>
     </div>
   </div>
 </header>
@@ -139,64 +137,84 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
 <!-- ── PRODUCT IDENTITY GATE ─────────────────────────────── -->
 <section>
   <div class="wrap">
-    <p class="slab">01 — PRODUCT IDENTITY GATE</p>
-    <h2>これが販売する商品です。生成はここで止めています。</h2>
+    <p class="slab">01 — 承認済みの商品で作り直した3本</p>
+    <h2>広告候補（この場で再生できます）</h2>
     <p class="sub">
-      CEO が実物の画像を見て「これで合っている」と確認するまで、
-      Higgsfield を1クレジットも使いません。この確認は<b>商品1つにつき1回だけ</b>です。
+      Canonical SKU <code>AM-644233726977</code> / CEO 承認 2026-09-08。
+      音を出してご確認ください。ナレーションは Higgsfield の日本語ボイス（Hana）です。
     </p>
 
-    <table>
-      <tbody>
-        <tr><td style="width:32%">Canonical SKU</td>
-            <td><code>AM-644233726977</code> <span class="p pass">再検証済</span></td></tr>
-        <tr><td>Canonical Source</td>
-            <td><a href="https://s.theckb.com/ja/goods/AM-644233726977" target="_blank" rel="noopener">s.theckb.com / goods / AM-644233726977</a><br>
-            <span style="color:var(--muted);font-size:12.5px">SKU は URL 自体に含まれる識別子。過去の誤った証拠経路とは独立に有効</span></td></tr>
-        <tr><td>Variant</td><td>ページ上に複数 variant の提示なし（単一）</td></tr>
-        <tr><td>Golden Reference</td><td><b>6点</b>（メインギャラリー5 + 詳細1）</td></tr>
-        <tr><td>除外した類似商品</td><td><b>4点</b>（同一ページ内・同解像度）</td></tr>
-        <tr><td>商品動画</td><td><span class="p unk">未レビュー</span> ページが重く再生に至らず。承認後に最初に確認します</td></tr>
-        <tr><td>GENERATION</td><td><span class="p fail">FROZEN</span> コードレベルで停止（テストで担保）</td></tr>
-      </tbody>
-    </table>
+    <div class="cards">
+      <div class="card top">
+        <video src="v/PAID_B.mp4" controls preload="metadata" playsinline></video>
+        <div class="cbody">
+          <div class="crow"><span class="cang">B — DEMONSTRATION LED（推奨）</span><span class="cid">10.5s</span></div>
+          <div class="chook">散水面のマクロ → 手元スイッチ → 人が浴びる → ホルダーへ</div>
+          <div class="qa">
+            <span class="lbl">Product Identity</span><span class="p pass">PASS</span>
+            <span class="lbl">Negative Product</span><span class="p pass">一致なし</span>
+            <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
+            <span class="lbl">3-Second Value</span><span class="p pass">PASS</span>
+            <span class="lbl">Continuity</span><span class="p pass">PASS</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
+          </div>
+          <div class="score"><b>推奨</b><span class="rec" style="color:var(--pass)">最初に回す1本</span></div>
+        </div>
+      </div>
 
-    <h3 style="margin-top:30px;font-size:16px;color:var(--pass)">販売する商品 — 観察できた形状</h3>
-    <table>
-      <thead><tr><th style="width:28%">部位</th><th>観察</th></tr></thead>
-      <tbody>
-        <tr><td>全体</td><td>ハンドヘルド。<b>ヘッドがハンドルに対して約45°傾いている</b></td></tr>
-        <tr><td>ヘッド</td><td>円形だが<b>薄い</b>。傾きのため斜めからは楕円に見える</td></tr>
-        <tr><td>散水面</td><td><b>白〜ごく淡いシルバー</b>。ごく細かい放射状の穴</td></tr>
-        <tr><td>ベゼル</td><td>散水面の外周に<b>鏡面クロームのリング</b></td></tr>
-        <tr><td><b>ヘッド後方の帯</b></td><td><b>光沢のある黒い帯が1本。刻み（ローレット）ではなく滑らか</b><br>
-            <span style="color:var(--fail);font-size:12.5px">旧クリエイティブはここを「刻みのある回転カラー」にしていました。最大の相違点です</span></td></tr>
-        <tr><td>ハンドル</td><td><b>細く、緩やかに湾曲し、先へ細くなる</b></td></tr>
-        <tr><td>操作部</td><td>首の側面に<b>小さな突起状のスイッチが1つ</b></td></tr>
-      </tbody>
-    </table>
+      <div class="card">
+        <video src="v/PAID_C.mp4" controls preload="metadata" playsinline></video>
+        <div class="cbody">
+          <div class="crow"><span class="cang">C — LIFESTYLE LED</span><span class="cid">10.1s</span></div>
+          <div class="chook">水のマクロ → 人が浴びる → ホルダー → 締め</div>
+          <div class="qa">
+            <span class="lbl">Product Identity</span><span class="p pass">PASS</span>
+            <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
+            <span class="lbl">Continuity</span><span class="p pass">PASS</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
+          </div>
+          <div class="score"><b>2本目</b><span class="rec">体験で刺す仮説</span></div>
+        </div>
+      </div>
 
-    <h3 style="margin-top:30px;font-size:16px;color:var(--fail)">旧クリエイティブが描いていた商品（別物）</h3>
-    <table>
-      <thead><tr><th style="width:46%">誤った特徴</th><th>出所の推定</th></tr></thead>
-      <tbody>
-        <tr><td>大きな<b>平らな円盤状ヘッド</b>（ハンドルに直角）</td><td>類似商品</td></tr>
-        <tr><td>ヘッド後方の<b>刻みのある回転カラー</b></td><td>類似商品「第二代养生花洒」の刻みリング</td></tr>
-        <tr><td>大きく目立つ<b>丸い STOP ボタン</b></td><td>旧 Truth の誤記述</td></tr>
-        <tr><td><b>太くまっすぐな円筒ハンドル</b></td><td>類似商品</td></tr>
-        <tr><td><b>黒い帯が無い</b></td><td>本体の特徴を落とした</td></tr>
-      </tbody>
-    </table>
+      <div class="card">
+        <video src="v/PAID_A.mp4" controls preload="metadata" playsinline></video>
+        <div class="cbody">
+          <div class="crow"><span class="cang">A — PROBLEM LED</span><span class="cid">10.5s</span></div>
+          <div class="chook">水 → 「賃貸だから、とあきらめていた」 → 手元で止まる → 工事不要</div>
+          <div class="qa">
+            <span class="lbl">Product Identity</span><span class="p pass">PASS</span>
+            <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
+            <span class="lbl">Continuity</span><span class="p pass">PASS</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
+          </div>
+          <div class="score"><b>3本目</b><span class="rec">問題提起は字幕が担当</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cmp" style="margin-top:26px">
+      <figure>
+        <img src="img/strip_B.png" alt="Concept B の4カット">
+        <figcaption>B の4カット。散水面・ベゼル後方の黒い帯・傾いた薄いヘッド・細く先細るハンドル・首の小さなスイッチが全カットで一致しています。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/base_hero.png" alt="BASE 差し替え用 hero">
+        <figcaption>BASE 商品ページ差し替え用の新しい hero。実在しない ▲▼ ボタンはありません。</figcaption>
+      </figure>
+    </div>
 
     <p class="note">
-      <b>「同じ出品者だから同じ商品」は成り立ちませんでした。</b>
-      除外した類似商品4点のうち1点は、本体と<b>同じ出品者ID</b>のものでした。
-      判定はページ上のどの領域に置かれているかで行います。
+      <b>QA は2方向で行いました。</b>
+      Golden Reference の必須特徴が出ているか、と、
+      既知の誤商品（刻みの回転カラー・▲▼ボタン・平らな円盤ヘッド・太い直管）に
+      似ていないか。<b>HARD FAIL は0件です。</b><br>
+      6ショット中5本が一発PASS。人が浴びるカットだけ商品が肌より暗く沈んだため、
+      商品専用のキーライトを指定して1回だけ作り直しました。
     </p>
   </div>
 </section>
 
-<!-- ── ROOT CAUSE ─────────────────────────────── -->
 <section>
   <div class="wrap">
     <p class="slab">02 — なぜ 100/100 で通ったのか</p>
@@ -423,36 +441,36 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
 <section style="border-bottom:none">
   <div class="wrap">
     <p class="slab">09 — 承認</p>
-    <h2>今日お願いするのは 1つだけです</h2>
+    <h2>残っているのは TikTok の連携 1件です</h2>
 
     <div class="approve">
       <p style="margin-top:0">
-        上の <b>01 — PRODUCT IDENTITY GATE</b> に書いた商品が、
-        実際に売る商品で合っているかを確認してください。<br>
-        特に見ていただきたいのは <b>ヘッド後方の「黒い帯」</b>です。
-        旧クリエイティブはここを「刻みのある回転カラー」にしていました。
+        <b>① TikTokアカウントの連携（約2分・CEO ご本人の操作）</b><br>
+        TikTok 広告マネージャー → キャンペーンを作成 → 広告コンテンツ →
+        「TikTokアカウントに連携」。<br>
+        この画面には<b>動画を直接アップロードする欄が出ません</b>。実際に触って確認しました。
+        連携はログインと権限付与を伴うため、私では実行しません。
       </p>
       <p>
-        合っていれば、次の1行だけをお返しください。
+        <b>② テスト配信の承認</b><br>
+        連携が済み次第、広告を下書きまで作り、遷移先の受理まで確認したうえで
+        このダッシュボードを更新します。そのあとで次の1行をいただければ配信します。
       </p>
-      <p style="margin-bottom:0;font-size:18px">
-        <code>APPROVE PRODUCT IDENTITY</code>
-      </p>
-      <p style="margin-bottom:0;color:var(--muted);font-size:13.5px">
-        この承認は<b>商品1つにつき1回だけ</b>です。
-        以降の生成・QA・リテイク・BASE差し替え・TikTok下書きは、
-        CEO を呼ばずに自律で進めます。次に止まるのは <code>APPROVE PAID</code> の1回だけです。
+      <p style="margin-bottom:0;font-size:17px">
+        <code>APPROVE PAID — ¥6,000 MAX LOSS</code>（案B・推奨）<br>
+        <span style="font-size:14px;color:var(--muted)">
+        最小で試すなら <code>APPROVE PAID — ¥2,000 MAX LOSS</code>、
+        学習期間まで回すなら <code>APPROVE PAID — ¥14,000 MAX LOSS</code></span>
       </p>
     </div>
 
     <p class="note">
       <b>広告の実支出は ¥0 のままです。</b>
-      凍結後に使った Higgsfield クレジットも <b>0</b> です。
-      本日の支出は Higgsfield Plus Monthly $58.65（承認済み）のみで、
-      年払い・クレジット追加購入・自動チャージは行っていません。<br><br>
-      <b>旧クリエイティブは削除していません。</b>
-      「この商品になったら失敗」という判定材料として保存し、
-      今後の自動QAで照合します。
+      本日の支出は Higgsfield Plus Monthly $58.65（承認済み）のみ。
+      年払い・クレジット追加購入・自動チャージは行っていません。
+      Higgsfield クレジット残高は <b>988.95</b>（70 消費）。<br><br>
+      仕入先の商品画像は<b>この公開ページに転載していません</b>（CEO 指示 / Rights D 維持）。
+      掲載しているのは当社が生成した素材のみです。
     </p>
   </div>
 </section>
