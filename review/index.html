@@ -327,17 +327,25 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
     <p class="slab">05 — 予算と安全条件</p>
     <h2>いくらまで、どこで止めるか</h2>
     <p class="sub">すべて提案です。承認された予算ではありません。</p>
+    <div class="blocker" style="border-left-color:var(--fail);background:rgba(232,97,90,.07);margin-bottom:20px">
+      <b style="color:var(--fail)">前回の提案（総額¥3,000 / 1日¥1,500）は実行できません。</b><br>
+      TikTok の予算入力欄が <b>「2,000 以上」</b> でした（実UIで確認・何も入力していません）。
+      1日 ¥1,500 は下限未満です。さらに TikTok 自身が
+      <b>「学習期間のため最低7日間の継続配信」</b>を推奨しています。<br>
+      下の A / B / C から選んでいただく形に修正しました。
+    </div>
 
     <table>
       <thead><tr><th style="width:40%">項目</th><th style="width:26%">提案</th><th>備考</th></tr></thead>
       <tbody>
-        <tr><td>テスト総額</td><td class="n">¥3,000</td><td>これを超えて使わない</td></tr>
-        <tr><td>1日あたり上限</td><td class="n">¥1,500</td><td></td></tr>
-        <tr><td><b>想定最大損失</b></td><td class="n"><b>¥3,000</b></td><td>注文0のまま使い切った場合</td></tr>
-        <tr><td>ATC 0 のまま</td><td class="n">¥1,500</td><td>到達時点で見直し</td></tr>
-        <tr><td>注文 0 のまま</td><td class="n">¥3,000</td><td>到達時点で見直し</td></tr>
+        <tr><td>1日あたりの下限</td><td class="n"><b>¥2,000</b></td><td><span class="p pass">実測</span> TikTok の入力欄が「2,000 以上」</td></tr>
+        <tr><td>推奨配信日数</td><td class="n">7日</td><td>TikTok が「学習期間のため最低7日」と表示</td></tr>
+        <tr><td><b>案A 最小</b></td><td class="n"><b>¥2,000</b></td><td>¥2,000 × 1日。旧提案 ¥3,000 の枠内に収まる</td></tr>
+        <tr><td><b>案B 推奨</b></td><td class="n"><b>¥6,000</b></td><td>¥2,000 × 3日。方向性が読める最小</td></tr>
+        <tr><td>案C 学習完了</td><td class="n">¥14,000</td><td>¥2,000 × 7日。TikTok の推奨どおり</td></tr>
+        <tr><td>ATC 0 のまま</td><td class="n">¥2,000</td><td>到達時点で見直し</td></tr>
+        <tr><td>注文 0 のまま</td><td class="n">上限到達</td><td>到達時点で停止</td></tr>
         <tr><td>失敗と判定しない下限</td><td class="n">100 クリック未満</td><td>少なすぎる数字で結論を出さない</td></tr>
-        <tr><td>レビュー</td><td class="n">2日後</td><td></td></tr>
       </tbody>
     </table>
 
@@ -432,9 +440,13 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
         <b>② テスト配信の承認</b><br>
         連携が済み次第、広告を下書きまで作り、遷移先の受理まで確認したうえで
         このダッシュボードを更新します。そのあとで、次の1行だけをいただければ配信します。
+        <b>金額は TikTok の下限 ¥2,000/日 に合わせて作り直しました。</b>
       </p>
       <p style="margin-bottom:0;font-size:17px">
-        <code>APPROVE PAID — ¥3,000 MAX LOSS</code>
+        <code>APPROVE PAID — ¥6,000 MAX LOSS</code>（案B・推奨）<br>
+        <span style="font-size:14px;color:var(--muted)">
+        最小で試すなら <code>APPROVE PAID — ¥2,000 MAX LOSS</code>、
+        学習期間まで回すなら <code>APPROVE PAID — ¥14,000 MAX LOSS</code></span>
       </p>
     </div>
 
