@@ -107,26 +107,28 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
     </div>
 
     <div class="verdict">
-      <span class="big">PAID READY: NO</span>
-      <span class="p fail">配信しない</span>
+      <span class="big" style="color:var(--warn)">PAID READY: あと1つ</span>
+      <span class="p warn">CEO操作が1件だけ残っています</span>
     </div>
 
-    <div class="blocker">
-      <b>唯一のブロッカー：Higgsfield のクレジット。</b>
-      広告アカウント・支払い・キャンペーン作成は通っています。
-      次の3本の Creative も <b>Preflight 100/100 まで詰め終わりました</b>。<br>
-      止まっているのは <b>3本の生成に 90 クレジット要るのに、残高が 5</b> であることだけです。
+    <div class="blocker" style="border-left-color:var(--warn);background:rgba(232,176,75,.07)">
+      <b style="color:var(--warn)">残っているのは「TikTokアカウントの連携」1件だけです。</b>
+      クレジットは解決し、A / B / C の3本を生成・QA・組み上げまで完了しました。
+      商品も浴室も光も全カットで一致しています。<br>
+      TikTok の広告作成画面は、この広告アカウントでは
+      <b>動画の直接アップロード欄が出ず、TikTokアカウントを連携した経路しか提示されません</b>
+      （実UIで確認）。連携はログインと権限付与を伴うため、CEO ご本人の操作が必要です。
     </div>
 
     <div class="gates">
-      <div class="gate"><div class="k">PRODUCT TRUTH</div><span class="p fail">FAIL</span></div>
-      <div class="gate"><div class="k">CREATIVE</div><span class="p fail">FAIL</span></div>
-      <div class="gate"><div class="k">BASE</div><span class="p fail">FAIL</span></div>
+      <div class="gate"><div class="k">PRODUCT TRUTH</div><span class="p pass">PASS</span></div>
+      <div class="gate"><div class="k">CREATIVE A/B/C</div><span class="p pass">PASS</span></div>
+      <div class="gate"><div class="k">BASE 画像</div><span class="p fail">要差し替え</span></div>
       <div class="gate"><div class="k">ADS INFRA</div><span class="p pass">PASS</span></div>
-      <div class="gate"><div class="k">FUNNEL (PAID)</div><span class="p unk">未到達</span></div>
+      <div class="gate"><div class="k">FUNNEL (PAID)</div><span class="p pass">Checkout到達</span></div>
       <div class="gate"><div class="k">TRACKING</div><span class="p warn">LIMITED</span></div>
       <div class="gate"><div class="k">SAFE BUDGET</div><span class="p warn">要CEO判断</span></div>
-      <div class="gate"><div class="k">PREFLIGHT A/B/C</div><span class="p pass">100/100</span></div>
+      <div class="gate"><div class="k">TIKTOK 広告素材</div><span class="p fail">CEO操作待ち</span></div>
     </div>
   </div>
 </header>
@@ -142,35 +144,40 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
     </p>
 
     <table>
-      <thead><tr><th style="width:34%">部位</th><th style="width:26%">CKB 実商品</th><th style="width:26%">現行クリエイティブ</th><th>判定</th></tr></thead>
+      <thead><tr><th style="width:34%">部位</th><th style="width:26%">CKB 実商品</th><th style="width:26%">新しい A/B/C</th><th>判定</th></tr></thead>
       <tbody>
         <tr><td>全体シルエット</td><td>ハンドヘルド・丸ヘッド</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
-        <tr><td>散水面の形</td><td>丸</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
-        <tr><td>クロームベゼル</td><td>クローム＋濃いリング</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
-        <tr><td>後方の回転カラー</td><td>ローレット（knurled）</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
-        <tr><td>STOP スイッチ</td><td>ハンドル側面・「STOP」刻印</td><td>同じ位置・同じ刻印</td><td><span class="p pass">PASS</span></td></tr>
         <tr><td>本体仕上げ</td><td>クロームメッキ</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
-        <tr><td><b>散水面の内側の色</b></td><td><b>白〜シルバー</b><br><span style="color:var(--muted);font-size:12px">分解図に「304不锈钢面板」</span></td><td><b>濃いグレー／チャコール</b></td><td><span class="p fail">FAIL</span></td></tr>
-        <tr><td>穴の密度・配置</td><td>細かい穴が均一に密</td><td>未照合</td><td><span class="p unk">UNKNOWN</span></td></tr>
-        <tr><td>水流（3モード）</td><td>外周のみ／全面／両方</td><td>未照合</td><td><span class="p unk">UNKNOWN</span></td></tr>
-        <tr><td><b>OVERALL PRODUCT IDENTITY</b></td><td colspan="2"></td><td><span class="p fail">FAIL</span></td></tr>
+        <tr><td>クロームベゼル</td><td>クローム＋濃いリング</td><td>同じ</td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td>後方の回転カラー</td><td>ローレット（knurled）</td><td>同じ。B は指で回す動作まで写る</td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td>STOP スイッチ</td><td>ハンドル側面・「STOP」刻印</td><td>同じ位置・同じ刻印</td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td><b>散水面の内側の色</b></td><td><b>白〜シルバー（マット）</b></td><td><b>白〜ごく淡いシルバー</b></td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td>穴の密度・配置</td><td>極細のピンホールが同心円状・ほぼ全面</td><td>同心円状・ほぼ全面</td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td>▲▼ボタン</td><td><b>存在しない</b></td><td>1カットも写っていない</td><td><span class="p pass">PASS</span></td></tr>
+        <tr><td>水流（3モード）</td><td>外周のみ／全面／両方</td><td><b>全面（MODE2）だけを見せている</b></td><td><span class="p warn">意図的に限定</span></td></tr>
+        <tr><td><b>OVERALL PRODUCT IDENTITY</b></td><td colspan="2"></td><td><span class="p pass">PASS</span></td></tr>
       </tbody>
     </table>
 
     <p class="note">
-      色の違いは照明のせいではありません。明るい白タイルの浴室で撮った C4 でも散水面は濃いグレーに写ります。
-      つまり素材色として濃く出ています。顧客が広告と届いた実物を見比べたときに気づきうる差であり、軽微ではありません。<br>
-      修正には再生成が必要です。Higgsfield の残クレジットは <b>5</b>、最安の動画モデルが <b>7.5</b> のため、本日は1本も生成できません。追加購入はしていません。
+      <b>前回 FAIL だった散水面の色は解消しました。</b>
+      原因は「暗い浴室のワールド指定が商品まで暗くしていたこと」で、
+      商品を画面内で最も明るい被写体に固定する指示を足して直しています。<br><br>
+      <b>1つだけ意図的に落としたものがあります。</b>
+      外周リングだけから水が出る MODE1 は、生成すると散水面の中央に
+      <b>実在しない漏斗状の穴</b>を作ってしまいました。仕入元の写真以上の情報が無く、
+      忠実に描けないため <b>MODE1 の映像は使わず、B は「リングを回すと変わる」という
+      操作の事実だけを見せる構成に変更</b>しました。クレジットで追いかけていません。
     </p>
 
     <div class="cmp">
       <figure>
-        <img src="img/identity.png" alt="C2 / C4 / C6 の商品同一性比較">
-        <figcaption>C2 / C4 / C6 は互いに同一商品（同じ面・同じベゼル・同じ位置の STOP 刻印・同じローレットリング）。ただし CKB 実物との色差は残っています。</figcaption>
+        <img src="img/strip_B.png" alt="Concept B の3カット">
+        <figcaption>B の3カット。散水面・ローレットカラー・STOP 刻印が全カットで一致しています。</figcaption>
       </figure>
       <figure>
-        <img src="img/paid_strip.png" alt="PAID v3 のカット構成">
-        <figcaption>PAID v3 の6カット。商品は全カットで一致していますが、散水面の色が実物と異なります。</figcaption>
+        <img src="img/strip_C.png" alt="Concept C の3カット">
+        <figcaption>C の3カット。同じ暗い石の浴室・同じ光で通しています。</figcaption>
       </figure>
     </div>
   </div>
@@ -180,93 +187,77 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
 <section>
   <div class="wrap">
     <p class="slab">02 — CREATIVES</p>
-    <h2>広告候補（この場で再生できます）</h2>
-    <p class="sub">音を出してご確認ください。ナレーションは Higgsfield / Inworld の日本語ボイス（Asuka）です。</p>
+    <h2>広告候補 3本（この場で再生できます）</h2>
+    <p class="sub">
+      音を出してご確認ください。ナレーションは Higgsfield の日本語ボイス（Hana）です。
+      <b>Windows / Haruka は使っていません。</b>
+      3本は色違いではなく、それぞれ別の仮説です。
+    </p>
 
     <div class="cards">
 
       <div class="card top">
-        <video src="v/PAID_V2.mp4" controls preload="metadata" playsinline></video>
+        <video src="v/PAID_B.mp4" controls preload="metadata" playsinline></video>
         <div class="cbody">
-          <div class="crow"><span class="cang">PAID v3（本命）</span><span class="cid">13.6s</span></div>
-          <div class="chook">問題（細い水）→ 解決（密な水）→ 体験 → 付け替え動作 → 機能 → ブランド</div>
+          <div class="crow"><span class="cang">B — DEMONSTRATION LED（推奨）</span><span class="cid">10.6s</span></div>
+          <div class="chook">散水面のマクロ → 指がリングを回す → 人が浴びる → ブランド</div>
           <div class="qa">
-            <span class="lbl">Product Match</span><span class="p fail">FAIL</span>
-            <span class="lbl">Water</span><span class="p warn">ACCEPTABLE</span>
+            <span class="lbl">Product Match</span><span class="p pass">PASS</span>
+            <span class="lbl">操作部の実在</span><span class="p pass">PASS</span>
             <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
-            <span class="lbl">Scroll Stop</span><span class="p warn">ACCEPTABLE</span>
+            <span class="lbl">Scroll Stop</span><span class="p pass">PASS</span>
             <span class="lbl">3-Second Value</span><span class="p pass">PASS</span>
-            <span class="lbl">Problem → Solution</span><span class="p pass">PASS</span>
-            <span class="lbl">Trust</span><span class="p fail">FAIL</span>
+            <span class="lbl">Continuity</span><span class="p pass">PASS</span>
             <span class="lbl">Subtitle / 音声</span><span class="p pass">PASS</span>
-            <span class="lbl">Paid Testable</span><span class="p fail">NO</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
           </div>
-          <div class="score"><b>—</b><span class="rec" style="color:var(--fail)">REVISE（商品の色）</span></div>
+          <div class="score"><b>推奨</b><span class="rec" style="color:var(--pass)">最初に回す1本</span></div>
         </div>
       </div>
 
       <div class="card">
-        <video src="v/C4.mp4" controls preload="metadata" playsinline></video>
+        <video src="v/PAID_C.mp4" controls preload="metadata" playsinline></video>
         <div class="cbody">
-          <div class="crow"><span class="cang">C4 — 賃貸 × 問題解決</span><span class="cid">5.0s</span></div>
-          <div class="chook">両手でホースから外して付け替える動作が実際に写る</div>
+          <div class="crow"><span class="cang">C — LIFESTYLE LED</span><span class="cid">10.0s</span></div>
+          <div class="chook">逆光の水 → 人が浴びる → 手元で止める → ブランド</div>
           <div class="qa">
-            <span class="lbl">Product Match</span><span class="p warn">色のみFAIL</span>
-            <span class="lbl">Problem → Solution</span><span class="p pass">PASS</span>
-            <span class="lbl">Water</span><span class="p warn">ACCEPTABLE</span>
-            <span class="lbl">Human Use</span><span class="p pass">PASS</span>
+            <span class="lbl">Product Match</span><span class="p pass">PASS</span>
+            <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
+            <span class="lbl">Scroll Stop</span><span class="p pass">PASS</span>
+            <span class="lbl">3-Second Value</span><span class="p warn">やや弱い</span>
+            <span class="lbl">Continuity</span><span class="p pass">PASS</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
           </div>
-          <div class="score"><b>85</b><span class="rec" style="color:var(--warn)">内部スコア。CEO基準の合格ではない</span></div>
+          <div class="score"><b>2本目</b><span class="rec">体験で刺す仮説</span></div>
         </div>
       </div>
 
       <div class="card">
-        <video src="v/C2.mp4" controls preload="metadata" playsinline></video>
+        <video src="v/PAID_A.mp4" controls preload="metadata" playsinline></video>
         <div class="cbody">
-          <div class="crow"><span class="cang">C2 — 水 × 体験</span><span class="cid">5.0s</span></div>
-          <div class="chook">暗いタイルの逆光。手に当たって散る水</div>
+          <div class="crow"><span class="cang">A — PROBLEM LED</span><span class="cid">10.6s</span></div>
+          <div class="chook">逆光の水 → 「賃貸だから、とあきらめていた」 → 工事も工具もいらない</div>
           <div class="qa">
-            <span class="lbl">Product Match</span><span class="p warn">色のみFAIL</span>
-            <span class="lbl">Water</span><span class="p warn">ACCEPTABLE</span>
-            <span class="lbl">World</span><span class="p pass">PASS</span>
-            <span class="lbl">Human Use</span><span class="p warn">手のみ</span>
+            <span class="lbl">Product Match</span><span class="p pass">PASS</span>
+            <span class="lbl">Claim Safety</span><span class="p pass">PASS</span>
+            <span class="lbl">Scroll Stop</span><span class="p pass">PASS</span>
+            <span class="lbl">3-Second Value</span><span class="p pass">PASS</span>
+            <span class="lbl">付け替え動作の実写</span><span class="p warn">なし</span>
+            <span class="lbl">Paid Testable</span><span class="p pass">YES</span>
           </div>
-          <div class="score"><b>82</b><span class="rec" style="color:var(--warn)">同上</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <video src="v/C6.mp4" controls preload="metadata" playsinline></video>
-        <div class="cbody">
-          <div class="crow"><span class="cang">C6 — 商品ディテール</span><span class="cid">5.0s</span></div>
-          <div class="chook">ローレットの回転カラーを指が回す。実物の操作部と一致</div>
-          <div class="qa">
-            <span class="lbl">Product Match</span><span class="p pass">操作部PASS</span>
-            <span class="lbl">Trust</span><span class="p pass">PASS</span>
-            <span class="lbl">Water</span><span class="p fail">冒頭2秒NG</span>
-          </div>
-          <div class="score"><b>74</b><span class="rec" style="color:var(--muted)">参照カットとして有効</span></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <video src="v/C5.mp4" controls preload="metadata" playsinline></video>
-        <div class="cbody">
-          <div class="crow"><span class="cang">C5 — UGC × 説明</span><span class="cid">5.0s</span></div>
-          <div class="chook">実物どおりの位置に「STOP」刻印が描かれた唯一の1本</div>
-          <div class="qa">
-            <span class="lbl">Product Match</span><span class="p fail">面が別物</span>
-            <span class="lbl">STOP 刻印</span><span class="p pass">PASS</span>
-          </div>
-          <div class="score"><b>77</b><span class="rec" style="color:var(--fail)">本編から除外済み</span></div>
+          <div class="score"><b>3本目</b><span class="rec">問題提起は字幕が担当</span></div>
         </div>
       </div>
 
     </div>
 
     <p class="note">
-      <b>3本そろっていません。</b> 角度の違う3本（Problem / Demonstration / Lifestyle）を作るには生成が必要で、
-      残クレジットでは不可能です。上記は既存素材の編集のみで作れた範囲です。
+      A について1つご報告します。「今の弱いシャワー → 付け替える」という
+      <b>交換前の映像は作りませんでした。</b>
+      生成すると、モデルが商品指定に引かれて
+      <b>HydroPeak 本体が弱い水を出している画</b>を作ってしまいます。
+      自社商品が「水が弱い」映像になるため使用を禁止し、
+      問題提起は字幕とナレーションに移しました。映像は事実だけにしています。
     </p>
   </div>
 </section>
@@ -380,116 +371,79 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
 <!-- ── PREFLIGHT ─────────────────────────────── -->
 <section>
   <div class="wrap">
-    <p class="slab">07 — CREATIVE PREFLIGHT</p>
-    <h2>次の3本は、生成前に100点まで詰め終わりました</h2>
-    <p class="sub">
-      生成してから直すのをやめ、生成前に失敗原因を潰す方式へ切り替えました。
-      Preflight を通らない限りコード側で生成をブロックします。
-    </p>
-
+    <p class="slab">07 — 生成の実績</p>
+    <h2>クレジットを何に使ったか</h2>
+    <p class="sub">Plus Monthly（$58.65／本日）で 1,200 クレジットが入りました。</p>
     <table>
-      <thead><tr><th style="width:30%">Concept</th><th style="width:14%">スコア</th><th style="width:20%">判定</th><th>止めているもの</th></tr></thead>
+      <thead><tr><th>内容</th><th style="width:22%">クレジット</th><th>結果</th></tr></thead>
       <tbody>
-        <tr><td>A — PROBLEM LED<br><span style="color:var(--muted);font-size:12px">賃貸 × 工事不要</span></td>
-            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
-        <tr><td>B — DEMONSTRATION LED<br><span style="color:var(--muted);font-size:12px">3段階の切替を連続動作で</span></td>
-            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
-        <tr><td>C — LIFESTYLE LED<br><span style="color:var(--muted);font-size:12px">ホテルのような体験</span></td>
-            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
-      </tbody>
-    </table>
-
-    <p class="note" style="margin-top:22px">
-      <b>44点から100点まで、CEOの操作なしで回復させました。</b>やったことは4つです。<br>
-      ① CKB の散水面を拡大して観察し、<b>穴の配置を OBSERVED として記録</b>
-      （マットな白〜淡いシルバーに極細ピンホールが同心円状・ほぼ全面・中心寄りがやや密）。
-      <b>穴数は数えられていないので数値は書いていません。</b><br>
-      ② 仕入先画像は生成器へ入れられないため、観察事実を
-      <b>構造化スペック5件</b>に落として参照にしました。<br>
-      ③ Pre-Mortem の High×High に<b>実際の対策</b>を入れました
-      （例：付け替え動作は<b>生成せず既存素材を使う</b>、3モードは1ショットに詰めず分割する）。<br>
-      ④ 難易度の高いショットを再設計して実現可能性を上げました。
-    </p>
-
-    <table style="margin-top:22px">
-      <thead><tr><th style="width:34%">Rights（A〜Eを分離）</th><th style="width:20%">判定</th><th>根拠</th></tr></thead>
-      <tbody>
-        <tr><td>A 内部の商品事実確認</td><td><span class="p pass">SAFE</span></td><td>自分のアカウントで閲覧し、文字記述だけ残す</td></tr>
-        <tr><td>B 生成器への画像入力</td><td><span class="p fail">BLOCKED</span></td><td>全点にウォーターマーク。SKU固有の許諾なし</td></tr>
-        <tr><td>C 供給元素材の加工</td><td><span class="p fail">BLOCKED</span></td><td>同上</td></tr>
-        <tr><td>D 供給元素材の転載</td><td><span class="p fail">BLOCKED</span></td><td>同上</td></tr>
-        <tr><td>E 観察事実からの新規生成</td><td><span class="p warn">CONDITIONAL</span></td><td>画素を使わないので画像著作権は生じない。ただし意匠・商標は MEDIUM/UNKNOWN。<b>LEGAL PASS とは書きません</b></td></tr>
+        <tr><td>本採用になったショット 9本</td><td class="mono">90</td><td><span class="p pass">採用</span></td></tr>
+        <tr><td>やり直し 4本（C2 / C3 / B3 / B1）</td><td class="mono">40</td><td><span class="p warn">原因を特定して変数を変更</span></td></tr>
+        <tr><td>A1（交換前の映像）</td><td class="mono">10</td><td><span class="p fail">不採用・設計変更</span></td></tr>
+        <tr><td>日本語ナレーション 3本</td><td class="mono">約6</td><td><span class="p pass">採用</span></td></tr>
+        <tr><td><b>使用合計</b></td><td class="mono"><b>約146</b></td><td>残 <b class="mono">約1,054</b></td></tr>
       </tbody>
     </table>
     <p class="note">
-      「ウォーターマークがある」から商品事実の確認までできない、という以前の判断は誤りでした。分離して整理し直しています。
+      当初見積は 67.5 でした。超えた理由は2つです。<br>
+      ① 配信品質のため <b>720p ではなく 1080p</b> で生成した（1本 7.5 → 10）。<br>
+      ② <b>やり直しが5本</b>発生した。すべて原因を特定し、同じプロンプトの素の再実行はしていません。<br>
+      追加購入はしていません。次の商品テストは残 1,054 クレジットの中で回せます。
     </p>
   </div>
 </section>
 
-<!-- ── CREDITS ─────────────────────────────── -->
 <section>
   <div class="wrap">
-    <p class="slab">08 — 唯一の判断事項</p>
-    <h2>Higgsfield のクレジット</h2>
-
+    <p class="slab">08 — 残っている作業</p>
+    <h2>CEO の操作が要るのは1件だけです</h2>
     <table>
-      <thead><tr><th style="width:30%"></th><th style="width:23%">STARTER（現行）</th><th style="width:23%">PLUS 年払い</th><th>PLUS 月払い</th></tr></thead>
+      <thead><tr><th style="width:38%">項目</th><th style="width:18%">状態</th><th>内容</th></tr></thead>
       <tbody>
-        <tr><td>クレジット/月</td><td class="n">270</td><td class="n">1,200</td><td class="n">1,200</td></tr>
-        <tr><td>表示価格</td><td class="n">$19/月</td><td class="n">$47/月 相当</td><td class="n">$59/月</td></tr>
-        <tr><td><b>実際の請求</b></td><td class="n">月 $19</td><td class="n"><b>今日 $563.65 一括</b></td><td class="n">未確認</td></tr>
-        <tr><td>更新</td><td>毎月</td><td>年ごと $564</td><td>未確認</td></tr>
-        <tr><td>A/B/C 3本の生成</td><td><span class="p fail">不可（残 5）</span></td><td><span class="p pass">可</span></td><td><span class="p pass">可</span></td></tr>
+        <tr><td><b>TikTokアカウントの連携</b></td><td><span class="p fail">CEO操作</span></td>
+            <td>広告作成の「広告コンテンツ」に<b>動画アップロード欄が出ません</b>。
+                TikTokアカウントを連携した経路しか提示されないため、
+                ログインと権限付与が要ります。<b>所要 約2分</b></td></tr>
+        <tr><td>BASE の商品画像</td><td><span class="p warn">AI作業</span></td>
+            <td>現行画像に<b>実在しない▲▼ボタン</b>が写っています。新しい素材から差し替えます</td></tr>
+        <tr><td>キャンペーン設定</td><td><span class="p pass">確認済</span></td>
+            <td>最適化目標を「クリック」にすると<b>ピクセル無しで進めます</b>（実UIで確認）</td></tr>
+        <tr><td>購入導線</td><td><span class="p pass">確認済</span></td>
+            <td>商品ページ → カート → 購入情報入力 まで到達。実購入はしていません</td></tr>
       </tbody>
     </table>
-
-    <p class="note">
-      A/B/C 3本に必要なのは <b>90 クレジット</b>、現在の残高は <b>5</b> です。<br>
-      月払い $59 は料金カードの取り消し線価格から算出できます（$59×12 − $564 = $144、ページの「月払いよりも$144お得」と一致）。
-      ただし<b>アップグレードのボタンから開く画面は年払いしか提示しません。</b>
-      月払いの決済画面には到達できませんでした。私の操作でページの切替ができなかっただけの可能性もあります。
-      月払いの初回請求額と即時付与の有無は<b>未確認です</b>。<br>
-      <b>「変更を確認」は押していません。課金は一切していません。</b>
-    </p>
-
-    <div class="approve" style="margin-top:24px">
-      <p style="margin-top:0">
-        <b>次の月次リセットは 2026-10-03（推定）です。</b>取引履歴に付与が1回しか無いため確定ではありません。
-        待てば 270 クレジット戻り、3本の生成に足ります。<b>費用は ¥0 です。</b>
-      </p>
-      <p style="margin-bottom:0">
-        急ぐ場合は <code>APPROVE PLUS ANNUAL</code>（今日 $563.65）、
-        待つ場合は <code>KEEP STARTER</code> とお答えください。
-      </p>
-    </div>
   </div>
 </section>
 
-<!-- ── APPROVAL ─────────────────────────────── -->
 <section style="border-bottom:none">
   <div class="wrap">
-    <p class="slab">06 — 承認</p>
-    <h2>いま承認をお願いする段階ではありません</h2>
+    <p class="slab">09 — 承認</p>
+    <h2>お願いする判断は 2つです</h2>
 
     <div class="approve">
       <p style="margin-top:0">
-        広告の仕組みは動く状態になりました。止まっているのは商品の一致だけです。<br>
-        <b>散水面の色が実物と違って見える動画を配信すると、届いた商品と広告が違う、という状態になります。</b>
-        そのため <code>APPROVE PAID</code> はお願いしません。
+        <b>① TikTokアカウントの連携（所要 約2分・CEO ご本人の操作）</b><br>
+        TikTok 広告マネージャー → キャンペーン作成 → 広告コンテンツ →
+        「TikTokアカウントに連携」。<br>
+        この画面には<b>動画を直接アップロードする欄が出ません</b>。実際に触って確認しました。
+        連携はログインと権限付与を伴うため、私では実行しません。
       </p>
-      <p style="margin-bottom:0">
-        次に必要なのは <b>Higgsfield のクレジット</b> です（現在 5／最安の動画生成 7.5）。<br>
-        購入するか、月次リセットを待つかは CEO のご判断です。<b>私からは購入しません。</b><br>
-        クレジットが確保でき次第、正しい商品で作り直し、BASE も差し替え、
-        遷移先URLの受理まで確認したうえで、このダッシュボードを更新して
-        <code>APPROVE PAID</code> を1回だけお願いします。
+      <p>
+        <b>② テスト配信の承認</b><br>
+        連携が済み次第、広告を下書きまで作り、遷移先の受理まで確認したうえで
+        このダッシュボードを更新します。そのあとで、次の1行だけをいただければ配信します。
+      </p>
+      <p style="margin-bottom:0;font-size:17px">
+        <code>APPROVE PAID — ¥3,000 MAX LOSS</code>
       </p>
     </div>
 
     <p class="note">
-      <b>実支出は現在 ¥0 です。</b> カード登録は完了していますが、それは配信の承認ではありません。
-      <code>APPROVE PAID</code> をいただくまで1円も使いません。
+      <b>広告の実支出は現在 ¥0 です。</b>
+      カード登録は完了していますが、それは配信の承認ではありません。
+      上記をいただくまで1円も使いません。<br>
+      本日の支出は <b>Higgsfield Plus Monthly $58.65（CEO承認済み）のみ</b>です。
+      年払い・クレジット追加購入・自動チャージは<b>いずれも行っていません</b>。
     </p>
   </div>
 </section>
