@@ -112,10 +112,10 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
     </div>
 
     <div class="blocker">
-      <b>唯一のブロッカー：商品の一致（PRODUCT TRUTH）。</b>
-      広告アカウント・支払い・キャンペーン作成はすべて通りました。<br>
-      止まっているのは<b>散水面が実物と違って見えること</b>だけです。
-      これが直るまで広告は出しません。
+      <b>唯一のブロッカー：Higgsfield のクレジット。</b>
+      広告アカウント・支払い・キャンペーン作成は通っています。
+      次の3本の Creative も <b>Preflight 100/100 まで詰め終わりました</b>。<br>
+      止まっているのは <b>3本の生成に 90 クレジット要るのに、残高が 5</b> であることだけです。
     </div>
 
     <div class="gates">
@@ -126,6 +126,7 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
       <div class="gate"><div class="k">FUNNEL (PAID)</div><span class="p unk">未到達</span></div>
       <div class="gate"><div class="k">TRACKING</div><span class="p warn">LIMITED</span></div>
       <div class="gate"><div class="k">SAFE BUDGET</div><span class="p warn">要CEO判断</span></div>
+      <div class="gate"><div class="k">PREFLIGHT A/B/C</div><span class="p pass">100/100</span></div>
     </div>
   </div>
 </header>
@@ -372,6 +373,96 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12.5px}
       </tbody>
     </table>
     <p class="note">未計上のコストがあるため、貢献利益は<b>上限</b>です。UNKNOWN を 0 として計算していません。</p>
+  </div>
+</section>
+
+
+<!-- ── PREFLIGHT ─────────────────────────────── -->
+<section>
+  <div class="wrap">
+    <p class="slab">07 — CREATIVE PREFLIGHT</p>
+    <h2>次の3本は、生成前に100点まで詰め終わりました</h2>
+    <p class="sub">
+      生成してから直すのをやめ、生成前に失敗原因を潰す方式へ切り替えました。
+      Preflight を通らない限りコード側で生成をブロックします。
+    </p>
+
+    <table>
+      <thead><tr><th style="width:30%">Concept</th><th style="width:14%">スコア</th><th style="width:20%">判定</th><th>止めているもの</th></tr></thead>
+      <tbody>
+        <tr><td>A — PROBLEM LED<br><span style="color:var(--muted);font-size:12px">賃貸 × 工事不要</span></td>
+            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
+        <tr><td>B — DEMONSTRATION LED<br><span style="color:var(--muted);font-size:12px">3段階の切替を連続動作で</span></td>
+            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
+        <tr><td>C — LIFESTYLE LED<br><span style="color:var(--muted);font-size:12px">ホテルのような体験</span></td>
+            <td class="n">100/100</td><td><span class="p pass">GENERATION READY</span></td><td>クレジットのみ</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note" style="margin-top:22px">
+      <b>44点から100点まで、CEOの操作なしで回復させました。</b>やったことは4つです。<br>
+      ① CKB の散水面を拡大して観察し、<b>穴の配置を OBSERVED として記録</b>
+      （マットな白〜淡いシルバーに極細ピンホールが同心円状・ほぼ全面・中心寄りがやや密）。
+      <b>穴数は数えられていないので数値は書いていません。</b><br>
+      ② 仕入先画像は生成器へ入れられないため、観察事実を
+      <b>構造化スペック5件</b>に落として参照にしました。<br>
+      ③ Pre-Mortem の High×High に<b>実際の対策</b>を入れました
+      （例：付け替え動作は<b>生成せず既存素材を使う</b>、3モードは1ショットに詰めず分割する）。<br>
+      ④ 難易度の高いショットを再設計して実現可能性を上げました。
+    </p>
+
+    <table style="margin-top:22px">
+      <thead><tr><th style="width:34%">Rights（A〜Eを分離）</th><th style="width:20%">判定</th><th>根拠</th></tr></thead>
+      <tbody>
+        <tr><td>A 内部の商品事実確認</td><td><span class="p pass">SAFE</span></td><td>自分のアカウントで閲覧し、文字記述だけ残す</td></tr>
+        <tr><td>B 生成器への画像入力</td><td><span class="p fail">BLOCKED</span></td><td>全点にウォーターマーク。SKU固有の許諾なし</td></tr>
+        <tr><td>C 供給元素材の加工</td><td><span class="p fail">BLOCKED</span></td><td>同上</td></tr>
+        <tr><td>D 供給元素材の転載</td><td><span class="p fail">BLOCKED</span></td><td>同上</td></tr>
+        <tr><td>E 観察事実からの新規生成</td><td><span class="p warn">CONDITIONAL</span></td><td>画素を使わないので画像著作権は生じない。ただし意匠・商標は MEDIUM/UNKNOWN。<b>LEGAL PASS とは書きません</b></td></tr>
+      </tbody>
+    </table>
+    <p class="note">
+      「ウォーターマークがある」から商品事実の確認までできない、という以前の判断は誤りでした。分離して整理し直しています。
+    </p>
+  </div>
+</section>
+
+<!-- ── CREDITS ─────────────────────────────── -->
+<section>
+  <div class="wrap">
+    <p class="slab">08 — 唯一の判断事項</p>
+    <h2>Higgsfield のクレジット</h2>
+
+    <table>
+      <thead><tr><th style="width:30%"></th><th style="width:23%">STARTER（現行）</th><th style="width:23%">PLUS 年払い</th><th>PLUS 月払い</th></tr></thead>
+      <tbody>
+        <tr><td>クレジット/月</td><td class="n">270</td><td class="n">1,200</td><td class="n">1,200</td></tr>
+        <tr><td>表示価格</td><td class="n">$19/月</td><td class="n">$47/月 相当</td><td class="n">$59/月</td></tr>
+        <tr><td><b>実際の請求</b></td><td class="n">月 $19</td><td class="n"><b>今日 $563.65 一括</b></td><td class="n">未確認</td></tr>
+        <tr><td>更新</td><td>毎月</td><td>年ごと $564</td><td>未確認</td></tr>
+        <tr><td>A/B/C 3本の生成</td><td><span class="p fail">不可（残 5）</span></td><td><span class="p pass">可</span></td><td><span class="p pass">可</span></td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+      A/B/C 3本に必要なのは <b>90 クレジット</b>、現在の残高は <b>5</b> です。<br>
+      月払い $59 は料金カードの取り消し線価格から算出できます（$59×12 − $564 = $144、ページの「月払いよりも$144お得」と一致）。
+      ただし<b>アップグレードのボタンから開く画面は年払いしか提示しません。</b>
+      月払いの決済画面には到達できませんでした。私の操作でページの切替ができなかっただけの可能性もあります。
+      月払いの初回請求額と即時付与の有無は<b>未確認です</b>。<br>
+      <b>「変更を確認」は押していません。課金は一切していません。</b>
+    </p>
+
+    <div class="approve" style="margin-top:24px">
+      <p style="margin-top:0">
+        <b>次の月次リセットは 2026-10-03（推定）です。</b>取引履歴に付与が1回しか無いため確定ではありません。
+        待てば 270 クレジット戻り、3本の生成に足ります。<b>費用は ¥0 です。</b>
+      </p>
+      <p style="margin-bottom:0">
+        急ぐ場合は <code>APPROVE PLUS ANNUAL</code>（今日 $563.65）、
+        待つ場合は <code>KEEP STARTER</code> とお答えください。
+      </p>
+    </div>
   </div>
 </section>
 
